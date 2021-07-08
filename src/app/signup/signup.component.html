@@ -1,0 +1,58 @@
+<div class="container-fluid abc">
+    <div class="row pt-5">
+        <div class="col-0 col-sm-2 col-md-3"></div>
+        <div class=" col-12 col-sm-8 col-md-6 mt-3 mb-3">
+          <div class="  card card-body  rounded" id="p1">
+            <h1 class="display-6 text-center "> <strong>Sign Up</strong>  </h1>
+            <form #ref="ngForm" (ngSubmit)="ref.form.valid && addUserData(ref.value)">
+
+                <div class="form-floating mb-3">
+                <input type="text"  placeholder="Username" id="username" name="username" ngModel required minlength="4" #refUsername="ngModel" class="form-control"  autocomplete="off">
+                    <label for="username" class="form-label">Username</label>
+ 
+                    <p class="x form-text text-danger" *ngIf="(ref.submitted||refUsername.touched)&&refUsername.errors?.required">*
+                        Username is required
+                    </p>
+                    <p class="x form-text text-danger" *ngIf="(ref.submitted||refUsername.touched)&&refUsername.errors?.minlength">*
+                        Minlength should be 4
+                    </p>
+                </div>
+
+
+
+                <div class="form-floating mb-3">
+                  <input type="email" id="email" placeholder="Email" name="email" ngModel required pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$" #refEmail="ngModel" class="form-control"  autocomplete="off">  
+                  <label for="email"  class="form-label">Email</label>
+         
+                  <p class="x form-text text-danger" *ngIf="(ref.submitted||refEmail.touched)&&refEmail.errors?.required">*
+                      Email is required
+                  </p>
+                  <p class="x form-text text-danger" *ngIf="(ref.submitted||refEmail.touched)&&refEmail.errors?.pattern">*
+                      Enter a valid email id
+                  </p>
+              </div>
+
+              <div class="form-floating mb-3 p-0">
+                    <input type="password"  id="password" name="password" ngModel required pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$" #refPassword="ngModel" class="form-control" placeholder="Password">
+                    <label for="password"  class="form-label">Password</label>                   
+                    <p class="x form form-text text-danger" *ngIf="(ref.submitted||refPassword.touched)&&refPassword.errors?.required">*
+                        Password is required
+                    </p>
+                    <ul class="x form form-text text-danger" *ngIf="(ref.submitted||refPassword.touched)&&refPassword.errors?.pattern">
+                        <li>Minimum eight characters</li>
+                        <li>Atleast one number</li>
+                        <li>Atleast one letter</li>
+                        <li>Atleast one special character</li>
+                      </ul>
+                </div>
+
+                <button class="btn btn-success  d-block mx-auto " type="submit">Sign Up</button>
+            </form>
+   
+        </div>
+        </div>
+        <div class=" col-0 col-sm-2 col-md-3"></div>
+    </div>
+  </div>
+  
+

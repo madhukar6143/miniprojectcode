@@ -1,0 +1,29 @@
+<div  id="ex">
+    <div class="row  ">
+       <div class="col-0 col-sm-3 col-md-3"></div>
+       <div class="col-0 col-sm-3 col-md-3"><button (click)="pastContest()" class="text-center  btn btn4 middle">Past Contest</button>
+       </div>
+       <div class="col-0 col-sm-3 col-md-3"><button (click)="givename()" class="text-center  btn btn3 middle">Future Contest</button>
+       </div>
+       <div class="col-0 col-sm-3 col-md-3"></div>
+     </div>
+     <div *ngIf="(user.length==0 && j==1)" class="h1">Past Contest List is Empty </div>
+     <div *ngIf="(user.length==0 && i==1)" class="h1">Future Contest List is Empty </div>
+     
+ <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-3 p-5  g-5">
+     <div class="col " *ngFor="let  p of user;">  
+       <div class="card shadow-lg  " >
+          <img class="card-img-top" src="https://upload.wikimedia.org/wikipedia/en/thumb/7/7b/Codechef%28new%29_logo.svg/1200px-Codechef%28new%29_logo.svg.png" alt="Card image cap">
+               <div class="card-body">
+                  <h5 class="card-title text-center"><strong>{{p.event}}</strong></h5>
+                  <p class=" p-3">Duration : {{p.duration | timeduration }}</p>
+                 <div><span class="text-center p-3"><strong>On: {{p.start.slice(0,10)}}</strong></span></div> 
+                 <div><span class=" p-3">Start : {{p.start.slice(11,19)}}</span><span class=" p-3">End : {{p.end.slice(11,19)}}</span></div> 
+                  <div class="card-footer">
+                     <div class="row">
+                     <div class="col-6">
+                      <button class="btn btn-grey "><a href="{{p.href}}">Visit Website </a></button>
+                                      
+               </div>
+ </div>
+ </div>
