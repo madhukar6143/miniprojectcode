@@ -12,7 +12,6 @@ import {FormsModule, NgForm} from '@angular/forms';
 import { HackerearthComponent } from './hackerearth/hackerearth.component';
 import { CalenderComponent } from './calender/calender.component';
 import { GoogleComponent } from './google/google.component';
-import { TimedurationPipe } from './timeduration.pipe';
 import { IcpcComponent } from './icpc/icpc.component'
 
 @NgModule({
@@ -26,7 +25,6 @@ import { IcpcComponent } from './icpc/icpc.component'
     HackerearthComponent,
     CalenderComponent,
     GoogleComponent,
-    TimedurationPipe,
     IcpcComponent
   ],
   imports: [
