@@ -8,7 +8,8 @@ import { SharedService } from '../shared.service';
 })
 export class CodeforcesComponent implements OnInit {
 
-  
+  i:number=0
+  j:number=0
   constructor( private sharedservice: SharedService ) { }
 user:any[]=[];
  currentdate=new Date;
@@ -19,7 +20,8 @@ user:any[]=[];
 
   givename()
   {
-    
+    this.i=1
+    this.j=0
     this.sharedservice.callContest('codeforces.com').subscribe(
    res=>
       { 
@@ -34,7 +36,8 @@ user:any[]=[];
 
     pastContest()
     {
-  
+      this.j=1
+      this.i=0
       this.sharedservice.callContestFromPast('codeforces.com').subscribe(
      res=>
         { 

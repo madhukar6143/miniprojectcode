@@ -7,7 +7,8 @@ import { SharedService } from '../shared.service';
   styleUrls: ['./hackerearth.component.css']
 })
 export class HackerearthComponent implements OnInit {
-
+  i:number=0
+  j:number=0
   
   constructor( private sharedservice: SharedService ) { }
 user:any[]=[];
@@ -18,7 +19,8 @@ user:any[]=[];
 
   givename()
   {
-    
+    this.i=1
+    this.j=0
     this.sharedservice.callContest('hackerearth.com').subscribe(
    res=>
       { 
@@ -33,7 +35,8 @@ user:any[]=[];
 
     pastContest()
     {
-  
+      this.j=1
+      this.i=0
       this.sharedservice.callContestFromPast('hackerearth.com').subscribe(
      res=>
         { 
