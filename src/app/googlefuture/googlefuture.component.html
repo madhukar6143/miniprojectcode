@@ -1,0 +1,28 @@
+<div class="firstclass">
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-3 p-5  g-5">
+ 
+      <div class="col " *ngFor="let  p of user;">  
+        <div class="card shadow-lg h-100  bg-light border-dark" >
+           <img class="card-img-top p-2" src="http://houseofvr.com/wp-content/uploads/2019/03/google-logo-500x208.png" alt="Card image cap">
+                <div class="card-body  ">
+                   <h5 class="card-title text-center"><strong>{{p.event}}</strong></h5>
+                      <div class="text-center "><strong>From</strong></div> 
+                      <div class="text-center ">{{p.start | date:'medium':'UTC +11'}}</div>
+                      <div class=" text-center "><strong>To</strong></div> 
+                      <div class="text-center ">{{p.end | date:'medium':'UTC +11'}}</div> 
+                   <div class="card-footer">
+                      <div class="row">
+                         <div class="col-6">
+                            <button class="btn btn-grey "><a href="{{p.href}}">Visit Website </a></button>                      
+                         </div>
+                      </div>
+                   </div>
+                </div>
+          </div>
+       </div>
+    </div>
+    <!-- <div *ngIf="!check"class="text-danger text-center bg-warning h1" >
+       Present Contest List is Empty </div>
+    <div *ngIf="check" > -->
+ </div>
+  

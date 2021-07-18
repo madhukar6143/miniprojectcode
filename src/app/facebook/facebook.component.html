@@ -1,30 +1,22 @@
-<div  id="ex">
-   <div class="row  ">
-      <div class="col-0 col-sm-3 col-md-3"></div>
-      <div class="col-0 col-sm-3 col-md-3"><button (click)="pastContest()" class="text-center  btn btn4 middle">Past Contest</button>
-      </div>
-      <div class="col-0 col-sm-3 col-md-3"><button (click)="givename()" class="text-center  btn btn3 middle">Future Contest</button>
-      </div>
-      <div class="col-0 col-sm-3 col-md-3"></div>
-    </div>
-    <div *ngIf="(user.length==0 && j==1)" class="h1">Past Contest List is Empty </div>
-    <div *ngIf="(user.length==0 && i==1)" class="h1">Future Contest List is Empty </div>
- <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-3 p-5  g-5">
- 
-    <div class="col " *ngFor="let  p of user;">  
-      <div class="card shadow-lg  " >
-         <img class="card-img-top" src="https://upload.wikimedia.org/wikipedia/en/thumb/7/7b/Codechef%28new%29_logo.svg/1200px-Codechef%28new%29_logo.svg.png" alt="Card image cap">
-              <div class="card-body">
-                 <h5 class="card-title text-center"><strong>{{p.event}}</strong></h5>
-                <div><span class="text-center p-3"><strong>From</strong></span></div> 
-                <div><span class=" p-3">Start : {{p.start | date:'medium':'UTC +11'}}</span></div>
-                <div><span class="text-center p-3"><strong>To</strong></span></div> 
-                <div><span class=" p-3">End : {{p.end | date:'medium':'UTC +11'}}</span></div> 
-                 <div class="card-footer"></div>
-                    <div class="row">
-                    <div class="col-6">
-                     <button class="btn btn-grey "><a href="{{p.href}}">Visit Website </a></button>
-                                     
-              </div>
- </div>
- </div>
+
+<div class="container-fluid " >
+  <ul class="nav nav-pills   nav-fill  justified-content-center  navMenu  " id="pills-tab" role="tablist">
+     <li class="nav-item  " role="presentation">
+       <a class="nav-link active  abc1 mt-1 rounded-0" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true" routerLink="facebookfuture">Future</a>
+     </li>
+     <li class="nav-item " role="presentation">
+       <a class="nav-link  mt-1  abc2 rounded-0 " id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false" routerLink="facebookpast">Past</a>
+     </li>
+  
+   </ul>
+   <div class="tab-content" id="pills-tabContent">
+     <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab"></div>
+     <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab"></div>
+     <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab"></div>
+   </div>
+  
+  
+  </div>
+   
+   
+  <router-outlet></router-outlet>

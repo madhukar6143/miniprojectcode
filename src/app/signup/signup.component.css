@@ -1,14 +1,9 @@
 .abc
 {
-    width: 100%;
-    min-height:100vh;
-    height: max-content;
-    text-align: center;
-    background-image: url(https://wallpapercave.com/wp/wp1908563.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    padding: 0%;
+  background: #43C6AC;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #F8FFAE, #43C6AC);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #F8FFAE, #43C6AC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  
   }
 .card { background-color: rgba(245, 245, 245, 0.1); }
 
