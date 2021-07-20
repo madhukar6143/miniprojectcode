@@ -189,7 +189,7 @@ const getEvents = async (dateTimeStart, dateTimeEnd) => {
 
 
 
-const job = schedule.scheduleJob({hour:14, minute: 45, dayOfWeek: 6}, function()
+const job = schedule.scheduleJob({hour:22, minute: 56, dayOfWeek: 0}, function()
 {
     start(); 
    

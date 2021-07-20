@@ -1,0 +1,21 @@
+<div class="row p-3 firstclass"> 
+<div class="col-sm-3"></div>
+<div class="col-sm-6  border border-warning border-2 ">
+<p class="display-4 text-center text-secondary m-5">Login</p>
+<form #ref="ngForm" (ngSubmit)="onLogin(ref.value)" class="w-75 mx-auto mt-5">
+    <div class="form-floating mb-3">
+        <input type="email" class="form-control" id="email" placeholder="name@example.com" name="email" 
+            ngModel>
+        <label for="email">Email</label>
+    </div>
+    <div class="form-floating mb-3">
+        <input type="password" class="form-control" id="password" placeholder="Password" name="password"  ngModel>
+        <label for="password">Password</label>
+    </div>
+  
+    <button class="btn btn-success d-block mx-auto" type="submit">Login</button>
+</form>
+</div>
+
+<div class="col-sm-3"></div>
+</div>

@@ -22,6 +22,13 @@ export class SharedService {
   }
 
 
+  loginUser(credentials):Observable<any>{
+    console.log("cred",credentials)
+    return  this.http.post("/user/login",credentials)
+  }
+
+
+
   getUsers():Observable<any>
   {
     return this.http.get("/user/getusers")
@@ -48,9 +55,6 @@ deleteUser(username):Observable<any>
   return this.http.delete("user/deleteUser")
 }
 
-loginUser(userObj):Observable<any>
-{
-  return this.http.post("user/login",userObj)
-}
+
 
 }

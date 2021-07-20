@@ -28,6 +28,7 @@ import { GooglepastComponent } from './googlepast/googlepast.component';
 import { GooglefutureComponent } from './googlefuture/googlefuture.component';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { HomeComponent } from './home/home.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -55,6 +56,7 @@ import { HomeComponent } from './home/home.component';
     GooglepastComponent,
     GooglefutureComponent,
     HomeComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,

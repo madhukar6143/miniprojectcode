@@ -20,6 +20,7 @@ import { HomeComponent } from './home/home.component';
 import { IcpcComponent } from './icpc/icpc.component';
 import { IcpcfutureComponent } from './icpcfuture/icpcfuture.component';
 import { IcpcpastComponent } from './icpcpast/icpcpast.component';
+import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { UserprofileComponent } from './userprofile/userprofile.component';
 
@@ -64,6 +65,7 @@ const routes: Routes = [
   }
 ]},
 {path:"calender",component:CalenderComponent},
+{path:"login",component:LoginComponent},
 {path:"userprofile",component:UserprofileComponent},
 {path:"google",component:GoogleComponent,children:[
   {
