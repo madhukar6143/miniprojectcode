@@ -66,7 +66,7 @@ try
     var start = new Date()
     var end = new Date();
 
-    end.setDate(end.getDate() + 80);
+    end.setDate(end.getDate() + 365);
 
         getEvents(start, end)
         .then(existList => 
