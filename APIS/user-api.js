@@ -5,8 +5,7 @@ const mc=require("mongodb").MongoClient
 const bcryptjs=require("bcryptjs")
 const jsw=require("jsonwebtoken")
 UserApi.use(exp.json())
-require("dotenv").config()
-const dataBaseUrl = process.env.DATABASEURL
+const dataBaseUrl = "mongodb+srv://madhu:madhu@clusterbackend.szevd.mongodb.net/myfirstdb?retryWrites=true&w=majority"
 let dataBaseObj;
 
 //connecting data base
