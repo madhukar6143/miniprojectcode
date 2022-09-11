@@ -8,13 +8,15 @@ import { Observable } from 'rxjs';
 export class SharedService {
   constructor( private http:HttpClient) { }
 
+  
+  // call to display all future contest from present time
   callContest(name):Observable<any>
   {
 
     return this.http.get('presentcontest/'+name)
   }
 
-
+//callling contests from past 30 days 
   callContestFromPast(name):Observable<any>
   {
 
@@ -22,6 +24,8 @@ export class SharedService {
   }
 
 
+  
+  //fucntion call for login from services
   loginUser(credentials):Observable<any>{
     console.log("cred",credentials)
     return  this.http.post("/user/login",credentials)
@@ -29,31 +33,14 @@ export class SharedService {
 
 
 
-  getUsers():Observable<any>
-  {
-    return this.http.get("/user/getusers")
-  }
-
-getUsersbyUsername(username):Observable<any>
-{
-  return this.http.get("/user/getusers/username")
-}
-
+ 
+//function call for creating a newuser from services 
 
 createUsers(userObj):Observable<any>
 {
   return this.http.post("/user/createuser",userObj)
 }
 
-modifyUser(userObj):Observable<any>
-{
-  return this.http.put("/user/modifyuser",userObj)
-}
-
-deleteUser(username):Observable<any>
-{
-  return this.http.delete("user/deleteUser")
-}
 
 
 
