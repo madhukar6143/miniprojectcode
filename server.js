@@ -20,7 +20,7 @@ app.use('/presentcontest/:name',async(req,res)=>{
     var todayDate= moment()
     todayDate=todayDate.format().slice(0,16)
    
-    let userlist= await axios.get("https://clist.by/api/v2/contest/?resource="+contestName+"&order_by=start&username="+process.env.USER_NAME+"&api_key=3d55d6d5e3cc483c544e8f3a57f8f14c5479d34e&start__gte="+todayDate+"");
+    let userlist= await axios.get("https://clist.by/api/v2/contest/?resource="+contestName+"&order_by=start&username=madhukar6143&api_key=3d55d6d5e3cc483c544e8f3a57f8f14c5479d34e&start__gte="+todayDate+"");
      
     res.send(userlist.data.objects)
     }
@@ -44,7 +44,7 @@ app.use('/pastcontest/:name',async(req,res)=>{
    
   
    
-    let userlist= await axios.get("https://clist.by/api/v2/contest/?resource="+contestName+"&order_by=-start&username="+process.env.USER_NAME+"&api_key=3d55d6d5e3cc483c544e8f3a57f8f14c5479d34e&start__gte="+oneMonthAgo+"&end__lte="+todayDate+"");
+    let userlist= await axios.get("https://clist.by/api/v2/contest/?resource="+contestName+"&order_by=-start&username=madhukar6143&api_key=3d55d6d5e3cc483c544e8f3a57f8f14c5479d34e&start__gte="+oneMonthAgo+"&end__lte="+todayDate+"");
      
     res.send(userlist.data.objects)
     }
