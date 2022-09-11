@@ -8,7 +8,7 @@ const moment=require("moment")
 
 // Provide the required configuration
  const CREDENTIALS = JSON.parse(process.env.CREDENTIALS);
- const calendarId = process.env.CALENDAR_ID;
+ const calendarId = "d7tms3adh537gocsa7a2ide9bo@group.calendar.google.com";
 
 // Google calendar API settings
 const SCOPES = 'https://www.googleapis.com/auth/calendar';
