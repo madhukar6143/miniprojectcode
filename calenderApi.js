@@ -60,7 +60,7 @@ try
     twoMonthAfter=twoMonthAfter.format().slice(0,19);
     todayDate=todayDate.format().slice(0,19)
    
-    userlist = await axios.get("https://clist.by/api/v2/contest/?resource="+element+"&order_by=start&username=madhukar6143&api_key=3d55d6d5e3cc483c544e8f3a57f8f14c5479d34e"&start__gte="+todayDate+"&end__lte="+twoMonthAfter+"")
+    userlist = await axios.get("https://clist.by/api/v2/contest/?resource="+element+"&order_by=start&username=madhukar6143&api_key=3d55d6d5e3cc483c544e8f3a57f8f14c5479d34e&start__gte="+todayDate+"&end__lte="+twoMonthAfter+"")
     var start = new Date()
     var end = new Date();
 
