@@ -26,25 +26,6 @@ mc.connect(dataBaseUrl,{useNewUrlParser:true,useUnifiedTopology:true},(err,clien
 
 
 
-//to get users 
-
-UserApi.get("/getusers",asyncHandler(async(req,res)=>{
-  let userList= await dataBaseObj.collection("mycollection").find().toArray()
-    res.send({message:userList})
-}))
-
-
-//to get users with username
-UserApi.get("/getusers/:username",asyncHandler(async(req,res)=>
-{
-    let un=req.params.username
-   let userObj= await dataBaseObj.collection("mycollection").findOne({username:un})
-    if(userObj==null)
-    res.send({message:"user not existed"})
-    else
-    res.send({message:userObj})
-}))
-
 // to create users
  UserApi.post("/createuser",asyncHandler(async(req,res)=>
  {
@@ -64,7 +45,6 @@ UserApi.get("/getusers/:username",asyncHandler(async(req,res)=>
     }
 }
 ))
-
 
 
 //user login
@@ -95,10 +75,5 @@ UserApi.post("/login", asyncHandler(async (req, res) => {
     }
 
 }))
-
-
-
-
-
 
 module.exports=UserApi;
