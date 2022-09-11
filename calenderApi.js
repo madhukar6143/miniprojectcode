@@ -190,7 +190,7 @@ const getEvents = async (dateTimeStart, dateTimeEnd) => {
 
 
 
-    start(); 
+   // start(); 
    
 
 
