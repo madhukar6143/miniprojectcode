@@ -2,7 +2,6 @@ const exp=require("express")
 const app=exp();
 const path=require("path")
 const axios = require('axios');
-require("dotenv").config()
 const moment=require("moment")
 
 //connect to angular app
@@ -56,5 +55,5 @@ app.use('/pastcontest/:name',async(req,res)=>{
 }
 )
 
-const port=process.env.PORT || 8080;
+const port=3000 || 8080;
 app.listen(port,()=>console.log(`server working on ${port}...`))
