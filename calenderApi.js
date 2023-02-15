@@ -6,7 +6,7 @@ const axios = require('axios');
 const schedule = require('node-schedule');
 const moment=require("moment")
 
-// Provide the required configuration
+// Provide the required configuratio
 
  const calendarId = "d7tms3adh537gocsa7a2ide9bo@group.calendar.google.com";
 

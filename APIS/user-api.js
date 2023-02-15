@@ -6,7 +6,7 @@ const bcryptjs=require("bcryptjs")
 const jsw=require("jsonwebtoken")
 UserApi.use(exp.json())
 const dataBaseUrl = "mongodb+srv://madhu:madhu@clusterbackend.szevd.mongodb.net/myfirstdb?retryWrites=true&w=majority"
-let dataBaseObj;
+let dataBaseO;
 
 //connecting data base
 mc.connect(dataBaseUrl,{useNewUrlParser:true,useUnifiedTopology:true},(err,client)=>

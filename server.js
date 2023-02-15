@@ -25,7 +25,7 @@ app.use('/presentcontest/:name',async(req,res)=>{
     res.send(userlist.data.objects)
     }
     catch (error) {
-        console.log(`Error at Contacting contacting server --> ${error}`);
+        console.log(`Error at Contacting --> ${error}`);
         return 0;
     }  
 }
